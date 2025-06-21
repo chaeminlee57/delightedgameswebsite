@@ -68,7 +68,7 @@ let arrPositionModel = [
 ];
 
 // Load GLB model
-const modelUrl = 'images/groupedisland.glb';
+const modelUrl = 'groupedisland.glb';
 
 loader.load(
   modelUrl,
