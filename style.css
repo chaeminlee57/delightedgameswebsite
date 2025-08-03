@@ -100,29 +100,17 @@ header .content-fit nav ul{
 
 /* Placeholder image styling for intro section */
 .placeholder-image {
-    width: 400px;
-    max-width: 400px;
-    aspect-ratio: auto; /* Let the image determine the aspect ratio */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden; 
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  display: flex;
 }
-
 .placeholder-image img {
-    width: 100%;
-    height: auto; /* Changed from 100% to auto */
-    object-fit: contain; /* Changed from cover to contain */
-    border-radius: 15px;
-    max-height: 400px; /* Prevent it from getting too tall */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 #description .content-fit {
@@ -282,12 +270,9 @@ header .content-fit nav ul{
         gap: 2em;
     }
     .placeholder-image {
-        width: 150px;
-        max-width: 150px;
-    }
-    .placeholder-image img {
-        max-height: 150px;
-    }
+  width: 150px;
+  height: 150px;
+}    
     #description .content-fit {
         flex-direction: column;
         gap: 2em;
@@ -318,13 +303,10 @@ header .content-fit nav ul{
         gap: 1.5em;
     }
     .placeholder-image {
-        width: 120px;
-        max-width: 120px;
-        font-size: 1em;
-    }
-    .placeholder-image img {
-        max-height: 120px;
-    }
+  width: 120px;
+  height: 120px;
+  font-size: 1em;
+}
     .section .number {
         font-size: 5em;
     }
