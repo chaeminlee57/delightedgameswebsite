@@ -1,10 +1,8 @@
-// Reset scroll position
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 window.scrollTo(0, 0);
 
-// Three.js setup
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.set(0, 0, 50);
 
@@ -15,7 +13,6 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.outputEncoding = THREE.sRGBEncoding;
 document.getElementById('container3D').appendChild(renderer.domElement);
 
-// Lighting setup
 const ambientLight = new THREE.AmbientLight(0xffffff, 2);
 scene.add(ambientLight);
 
@@ -31,7 +28,6 @@ const pointLight = new THREE.PointLight(0xffffff, 2, 50);
 pointLight.position.set(0, 0, 0);
 scene.add(pointLight);
 
-// Model variables
 let island;
 let islandMixer;
 const loader = new THREE.GLTFLoader();
@@ -128,7 +124,6 @@ function modelMove() {
 
   const { position, rotation } = arrPositionModel[idx];
 
-  // Use GSAP for smooth animations
   gsap.to(island.position, {
     x: position.x,
     y: position.y,
@@ -146,7 +141,6 @@ function modelMove() {
   });
 }
 
-// Render loop
 function reRender3D() {
   requestAnimationFrame(reRender3D);
   renderer.render(scene, camera);
@@ -154,7 +148,6 @@ function reRender3D() {
 }
 reRender3D();
 
-// Event listeners
 window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
